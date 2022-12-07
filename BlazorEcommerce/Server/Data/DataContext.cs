@@ -24,8 +24,8 @@ namespace BlazorEcommerce.Server.Data
                 new Category
                 {
                     Id = 2,
-                    Name = "Cds",
-                    Url = "cds"
+                    Name = "Music",
+                    Url = "music"
                 },
                 new Category
                 {
