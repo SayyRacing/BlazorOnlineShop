@@ -3,6 +3,7 @@ using BlazorEcommerce.Server.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BlazorEcommerce.Server.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20221211150145_ProductVariants")]
+    partial class ProductVariants
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -206,17 +209,17 @@ namespace BlazorEcommerce.Server.Migrations
                         new
                         {
                             Id = 5,
-                            Name = "Console"
+                            Name = "Stream"
                         },
                         new
                         {
                             Id = 6,
-                            Name = "Console + Controllers"
+                            Name = "Blu-ray"
                         },
                         new
                         {
                             Id = 7,
-                            Name = "Console + Controllers + Game"
+                            Name = "VHS"
                         },
                         new
                         {
@@ -259,161 +262,105 @@ namespace BlazorEcommerce.Server.Migrations
                         new
                         {
                             ProductId = 1,
-                            ProductTypeId = 8,
+                            ProductTypeId = 2,
                             OriginalPrice = 19.99m,
                             Price = 9.99m
                         },
                         new
                         {
                             ProductId = 1,
-                            ProductTypeId = 9,
+                            ProductTypeId = 3,
                             OriginalPrice = 0m,
                             Price = 7.99m
                         },
                         new
                         {
                             ProductId = 1,
-                            ProductTypeId = 10,
+                            ProductTypeId = 4,
                             OriginalPrice = 29.99m,
                             Price = 19.99m
                         },
                         new
                         {
                             ProductId = 2,
-                            ProductTypeId = 8,
-                            OriginalPrice = 14.99m,
-                            Price = 7.99m
-                        },
-                        new
-                        {
-                            ProductId = 2,
-                            ProductTypeId = 9,
-                            OriginalPrice = 14.99m,
-                            Price = 7.99m
-                        },
-                        new
-                        {
-                            ProductId = 2,
-                            ProductTypeId = 10,
+                            ProductTypeId = 2,
                             OriginalPrice = 14.99m,
                             Price = 7.99m
                         },
                         new
                         {
                             ProductId = 3,
-                            ProductTypeId = 8,
-                            OriginalPrice = 0m,
-                            Price = 6.99m
-                        },
-                        new
-                        {
-                            ProductId = 3,
-                            ProductTypeId = 9,
-                            OriginalPrice = 19.99m,
-                            Price = 6.99m
-                        },
-                        new
-                        {
-                            ProductId = 3,
-                            ProductTypeId = 10,
+                            ProductTypeId = 2,
                             OriginalPrice = 0m,
                             Price = 6.99m
                         },
                         new
                         {
                             ProductId = 4,
-                            ProductTypeId = 3,
-                            OriginalPrice = 0m,
-                            Price = 3.99m
-                        },
-                        new
-                        {
-                            ProductId = 4,
-                            ProductTypeId = 2,
-                            OriginalPrice = 0m,
-                            Price = 9.99m
-                        },
-                        new
-                        {
-                            ProductId = 4,
-                            ProductTypeId = 4,
-                            OriginalPrice = 0m,
-                            Price = 19.99m
-                        },
-                        new
-                        {
-                            ProductId = 5,
-                            ProductTypeId = 2,
-                            OriginalPrice = 0m,
-                            Price = 3.99m
-                        },
-                        new
-                        {
-                            ProductId = 5,
-                            ProductTypeId = 3,
-                            OriginalPrice = 0m,
-                            Price = 3.99m
-                        },
-                        new
-                        {
-                            ProductId = 5,
-                            ProductTypeId = 4,
-                            OriginalPrice = 0m,
-                            Price = 3.99m
-                        },
-                        new
-                        {
-                            ProductId = 6,
-                            ProductTypeId = 2,
-                            OriginalPrice = 0m,
-                            Price = 2.99m
-                        },
-                        new
-                        {
-                            ProductId = 6,
-                            ProductTypeId = 3,
-                            OriginalPrice = 0m,
-                            Price = 2.99m
-                        },
-                        new
-                        {
-                            ProductId = 6,
-                            ProductTypeId = 4,
-                            OriginalPrice = 0m,
-                            Price = 2.99m
-                        },
-                        new
-                        {
-                            ProductId = 7,
                             ProductTypeId = 5,
+                            OriginalPrice = 0m,
+                            Price = 3.99m
+                        },
+                        new
+                        {
+                            ProductId = 4,
+                            ProductTypeId = 6,
+                            OriginalPrice = 0m,
+                            Price = 9.99m
+                        },
+                        new
+                        {
+                            ProductId = 4,
+                            ProductTypeId = 7,
+                            OriginalPrice = 0m,
+                            Price = 19.99m
+                        },
+                        new
+                        {
+                            ProductId = 5,
+                            ProductTypeId = 5,
+                            OriginalPrice = 0m,
+                            Price = 3.99m
+                        },
+                        new
+                        {
+                            ProductId = 6,
+                            ProductTypeId = 5,
+                            OriginalPrice = 0m,
+                            Price = 2.99m
+                        },
+                        new
+                        {
+                            ProductId = 7,
+                            ProductTypeId = 8,
                             OriginalPrice = 29.99m,
                             Price = 19.99m
                         },
                         new
                         {
                             ProductId = 7,
-                            ProductTypeId = 6,
+                            ProductTypeId = 9,
                             OriginalPrice = 0m,
                             Price = 69.99m
                         },
                         new
                         {
                             ProductId = 7,
-                            ProductTypeId = 7,
+                            ProductTypeId = 10,
                             OriginalPrice = 59.99m,
                             Price = 49.99m
                         },
                         new
                         {
                             ProductId = 8,
-                            ProductTypeId = 6,
+                            ProductTypeId = 8,
                             OriginalPrice = 24.99m,
                             Price = 9.99m
                         },
                         new
                         {
                             ProductId = 9,
-                            ProductTypeId = 5,
+                            ProductTypeId = 8,
                             OriginalPrice = 0m,
                             Price = 14.99m
                         });

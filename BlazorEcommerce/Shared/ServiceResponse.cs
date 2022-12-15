@@ -8,7 +8,7 @@ namespace BlazorEcommerce.Shared
 {
     public class ServiceResponse<T>
     {
-        //Serwis odpowiadający za pozyskiwanie informacji dowolnego typu
+        //Serwis odpowiadający za pozyskiwanie danych dowolnego typu
         public T? Data { get; set; }
         public bool Success { get; set; } = true;   
         public string Message { get; set; } = string.Empty;

@@ -10,12 +10,13 @@ namespace BlazorEcommerce.Server.Controllers
     {
         private readonly IProductService _productService;
 
-        //Operacje CRUD
+        //Poszczególne operacje wyszukiwania
         public ProductController(IProductService productService)
         {
             _productService = productService;
         }
      
+        //pozyskiwanie wszystkich produktów
         [HttpGet]
         public async Task<ActionResult<ServiceResponse<List<Product>>>> GetProducts()
         {
@@ -23,6 +24,7 @@ namespace BlazorEcommerce.Server.Controllers
             return Ok(result);
         }
 
+        //pozyskiwanie pojedynczego produktu
         [HttpGet("{productId}")]
         public async Task<ActionResult<ServiceResponse<Product>>> GetProduct(int productId)
         {
@@ -30,12 +32,29 @@ namespace BlazorEcommerce.Server.Controllers
             return Ok(result);
         }
 
+        //pozyskiwanie produktów konkretnej kategorii
         [HttpGet("category/{categoryUrl}")]
-
         public async Task<ActionResult<ServiceResponse<List<Product>>>> GetProductsByCategory(string categoryUrl)
         {
             var result = await _productService.GetProductsByCategory(categoryUrl);
             return Ok(result);
         }
+
+        //pozyskiwanie produktów poprzez wyszukiwanie
+        [HttpGet("search/{searchText}")]
+        public async Task<ActionResult<ServiceResponse<List<Product>>>> SearchProducts(string searchText)
+        {
+            var result = await _productService.SearchProducts(searchText);
+            return Ok(result);
+        }
+
+        //Wyszukiwanie produktów na bazie sugestii
+        [HttpGet("searchsuggestions/{searchText}")]
+        public async Task<ActionResult<ServiceResponse<List<Product>>>> GetProductSearchSuggestions(string searchText)
+        {
+            var result = await _productService.GetProductSearchSuggestions(searchText);
+            return Ok(result);
+        }
+
     }
 }
