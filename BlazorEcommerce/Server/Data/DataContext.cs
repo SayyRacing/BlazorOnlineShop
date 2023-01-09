@@ -70,7 +70,9 @@ namespace BlazorEcommerce.Server.Data
                 Title = "The Witcher 3: Wild Hunt",
                 Description = "The Witcher 3: Wild Hunt is a 2015 action role-playing game developed and published by CD Projekt. It is the sequel to the 2011 game The Witcher 2: Assassins of Kings and the third game in The Witcher video game series, played in an open world with a third-person perspective. The games are based on The Witcher series of fantasy novels written by Andrzej Sapkowski.",
                 ImageUrl = "https://upload.wikimedia.org/wikipedia/en/0/0c/Witcher_3_cover_art.jpg",
-                CategoryId = 1
+                CategoryId = 1,
+                Featured = true
+
             },
 
             new Product
@@ -95,7 +97,9 @@ namespace BlazorEcommerce.Server.Data
                 Title = "Immortalized",
                 Description = "Immortalized is the sixth studio album by American heavy metal band Disturbed. The album was released on August 21, 2015 by Reprise Records, and is Disturbed's first studio album since Asylum (2010), marking the longest gap between two studio albums in their career.With 98,000 album-equivalent units in its first week, Immortalized is Disturbed's fifth consecutive number one debut on the United States Billboard 200 chart. They are the third band in history to achieve this feat, after Metallica and Dave Matthews Band. The band also found crossover success in the album's third single, a cover of the 1964 song \"The Sound of Silence\" by Simon & Garfunkel, which marked Disturbed's highest ranked single on the Billboard Hot 100 at number 42 and has since become Disturbed's biggest song since \"Down with the Sickness\".",
                 ImageUrl = "https://upload.wikimedia.org/wikipedia/en/0/0b/Disturbed_immortalized_cover.jpg",
-                CategoryId = 2
+                CategoryId = 2,
+                Featured = true
+                
             },
             new Product
             {
@@ -127,7 +131,8 @@ namespace BlazorEcommerce.Server.Data
                 Title = "Steam Deck",
                 Description = "The Steam Deck is a handheld gaming computer developed by Valve Corporation. Released on February 25, 2022, the Steam Deck can be played as a handheld or connected to a monitor in the same manner as the Nintendo Switch. It is an x86-64-v3 device with integrated gaming inputs designed to play the full Steam library, including Windows PC games via the Linux-based Proton compatibility layer. The system is an open platform, allowing users to install other compatible games on the device or other operating systems.",
                 ImageUrl = "https://upload.wikimedia.org/wikipedia/commons/5/5d/Steam_Deck_%28front%29.png",
-                CategoryId = 3
+                CategoryId = 3,
+                Featured = true
             }
             );
 
@@ -250,34 +255,34 @@ namespace BlazorEcommerce.Server.Data
                 {
                     ProductId = 7,
                     ProductTypeId = 5,
-                    Price = 19.99m,
-                    OriginalPrice = 29.99m
+                    Price = 399.99m,
+                    OriginalPrice = 499.99m
                 },
                 new ProductVariant
                 {
                     ProductId = 7,
                     ProductTypeId = 6,
-                    Price = 69.99m
+                    Price = 519.99m
                 },
                 new ProductVariant
                 {
                     ProductId = 7,
                     ProductTypeId = 7,
-                    Price = 49.99m,
-                    OriginalPrice = 59.99m
+                    Price = 549.99m,
+                    OriginalPrice = 799.99m
                 },
                 new ProductVariant
                 {
                     ProductId = 8,
                     ProductTypeId = 6,
-                    Price = 9.99m,
-                    OriginalPrice = 24.99m,
+                    Price = 269.99m,
+                    OriginalPrice = 299.99m,
                 },
                 new ProductVariant
                 {
                     ProductId = 9,
                     ProductTypeId = 5,
-                    Price = 14.99m
+                    Price = 399.99m
                 }              
             );
         }
